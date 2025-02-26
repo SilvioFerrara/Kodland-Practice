@@ -30,6 +30,8 @@ public class PlayerLook : MonoBehaviour
         rotPlayerArms.x -= rotateY;//rotPlayerArms.x: Aggiorna la rotazione sull'asse X delle braccia del giocatore basato sull'input del mouse verticale.
         rotPlayerArms.z = 0;//rotPlayerArms.z: Fissa la rotazione sull'asse Z a 0 per evitare rotazioni indesiderate.
         rotPlayer.y += rotateX;//rotPlayer.y: Aggiorna la rotazione sull'asse Y del corpo del giocatore basato sull'input del mouse orizzontale.
+        //FIXED
+        rotPlayer.x -= rotateY; //rotPlayer.x: Aggiorna la rotazione sull'asse X del corpo del giocatore basato sull'input del mouse verticale.
 
         // Limita xAxisClamp tra -90 e 90 gradi per evitare che il giocatore possa guardare troppo in alto o troppo in basso.
         // Regola rotPlayerArms.x per mantenere la rotazione limitata quando xAxisClamp supera i limiti.

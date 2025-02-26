@@ -18,9 +18,12 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        //Destroy(this);    //Delete
-        //ChangeHealth(0);  //Delete
-        ChangeHealth(100); //Add
+        // Rimosso il codice errato che distruggeva il player all'avvio
+        //Destroy(this);    // FIXED
+        //ChangeHealth(0);  // FIXED
+
+        // Impostata la salute iniziale correttamente
+        ChangeHealth(100); // FIXED
     }
 
     public void ChangeHealth(int hp)
