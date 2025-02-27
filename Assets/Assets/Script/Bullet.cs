@@ -20,9 +20,10 @@ public class Bullet : MonoBehaviour
         foreach (var item in targets)
         {
             if (item.tag == "Enemy")
-            {
-                item.gameObject.SetActive(false); //prova
-                this.gameObject.SetActive(false); //prova
+            {             
+                Destroy(item.gameObject); // Distrugge il nemico
+                Destroy(gameObject);      // Distrugge il proiettile
+                break; // Esce dal ciclo per evitare più distruzioni contemporanee
             }
         }
     }
